@@ -114,7 +114,7 @@ public class JFBackend
 							name = file.getName().substring(0, file.getName().lastIndexOf('.'));
 							loaded.add(name);
 							Files.copy(Paths.get(src + "\\" + file.getName()), Paths.get(System.getProperty("user.dir") + "\\" + name + ".class"), StandardCopyOption.REPLACE_EXISTING);
-							ClassLoader loader = new URLClassLoader(new URL[]{new URL(System.getProperty("user.dir").replace("F:", "file:\\"))});
+							ClassLoader loader = new URLClassLoader(new URL[]{new URL(System.getProperty("user.dir").replace("C:", "file:\\"))});
 							Class<?> pane = loader.loadClass(name);
 							if(applet.isAssignableFrom(pane))
 							{

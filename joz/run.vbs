@@ -1,0 +1,1 @@
+WScript.CreateObject("WScript.Shell").Run "java JFBackend memes", 0, True
